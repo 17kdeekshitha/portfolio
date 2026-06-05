@@ -38,16 +38,7 @@ app.post("/contact", async (req, res) => {
   },
 });
 
-app.get("/env-check", (req, res) => {
-  res.json({
-    hasUser: !!process.env.EMAIL_USER,
-    hasPass: !!process.env.EMAIL_PASS,
-  });
-});
-await transporter.verify();
-console.log("SMTP Connection Successful");
-
-    await transporter.sendMail({
+await transporter.sendMail({
       from: process.env.EMAIL_USER,
       replyTo: email,
       to: process.env.EMAIL_USER,
@@ -73,6 +64,12 @@ ${message}
       message: "Failed to send message",
     });
   }
+});
+app.get("/env-check", (req, res) => {
+  res.json({
+    hasUser: !!process.env.EMAIL_USER,
+    hasPass: !!process.env.EMAIL_PASS,
+  });
 });
 
 const PORT = process.env.PORT || 5000;
