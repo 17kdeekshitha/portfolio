@@ -11,6 +11,13 @@ app.use(express.json());
 app.post("/contact", async (req, res) => {
   const { name, email, message } = req.body;
 
+app.get("/env-check", (req, res) => {
+  res.json({
+    hasUser: !!process.env.EMAIL_USER,
+    hasPass: !!process.env.EMAIL_PASS,
+  });
+});
+
   if (!name || !email || !message) {
     return res.status(400).json({
       success: false,
