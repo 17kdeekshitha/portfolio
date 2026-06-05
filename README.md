@@ -22,3 +22,4 @@ node server.js
 ```
 
 The backend listens on port `5000` and exposes the `/contact` endpoint used by the portfolio form.
+used resend for mail
