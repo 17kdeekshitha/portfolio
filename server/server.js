@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
-const nodemailer = require("nodemailer");
+const { Resend } = require("resend");
 require("dotenv").config();
 
 const app = express();
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 app.use(cors());
 app.use(express.json());
@@ -38,32 +39,31 @@ app.post("/contact", async (req, res) => {
   },
 });
 
-await transporter.sendMail({
-      from: process.env.EMAIL_USER,
-      replyTo: email,
-      to: process.env.EMAIL_USER,
-      subject: `Portfolio Contact from ${name}`,
-      text: `
+await resend.emails.send({
+  from: "onboarding@resend.dev",
+  to: process.env.EMAIL_USER,
+  subject: `Portfolio Contact from ${name}`,
+  text: `
 Name: ${name}
 Email: ${email}
 
 Message:
 ${message}
-      `,
-    });
+`,
+});
 
     res.status(200).json({
       success: true,
       message: "Message sent successfully",
     });
   } catch (err) {
-    console.error(err);
+  console.error(err);
 
-    res.status(500).json({
-      success: false,
-      message: "Failed to send message",
-    });
-  }
+  res.status(500).json({
+    success: false,
+    message: err.message,
+  });
+}
 });
 app.get("/env-check", (req, res) => {
   res.json({
