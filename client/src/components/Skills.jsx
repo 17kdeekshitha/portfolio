@@ -88,25 +88,25 @@ export default function Skills() {
   return (
     <section
   id="skills"
-  className="min-h-screen bg-black text-white px-6 py-12"
+  className="min-h-screen bg-black px-4 py-16 text-white sm:px-6 sm:py-20"
 >
-  <div className="max-w-6xl mx-auto">
+  <div className="mx-auto max-w-6xl">
 
-    <h2 className="text-5xl font-bold text-center mb-16">
+    <h2 className="mb-12 text-center text-3xl font-bold sm:text-4xl lg:mb-16 lg:text-5xl">
       My Skills
     </h2>
 
-    <div className="grid md:grid-cols-2 gap-12">
+    <div className="grid gap-12 sm:grid-cols-2">
 
       {Object.entries(skillCategories).map(
         ([category, skills]) => (
           <div key={category}>
 
-            <h3 className="text-4xl font-semibold mb-6 text-white">
+            <h3 className="mb-6 text-2xl font-semibold text-white sm:text-3xl lg:text-4xl">
               {category}
             </h3>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
 
               {skills.map((skill) => (
                 <div
@@ -115,8 +115,8 @@ export default function Skills() {
                     flex
                     items-center
                     gap-3
-                    px-4
-                    py-3
+                    px-3
+                    py-2.5
                     rounded-full
                     bg-slate-400/70
                     border
@@ -124,10 +124,12 @@ export default function Skills() {
                     hover:border-cyan-400
                     hover:scale-105
                     transition
-                    text-3xl
+                    text-base
+                    sm:px-4
+                    sm:py-3
                   "
                 >
-                  <span className="text-2xl">
+                  <span className="text-xl sm:text-2xl">
                     {skill.icon}
                   </span>
 

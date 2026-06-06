@@ -84,23 +84,26 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen px-6 py-20 bg-black text-white"
+      className="min-h-screen bg-black px-4 py-16 text-white sm:px-6 sm:py-20"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
 
         <h2
           className="
-            text-5xl
+            text-3xl
             font-bold
             text-center
-            mb-16
+            mb-12
             text-white
+            sm:text-4xl
+            lg:mb-16
+            lg:text-5xl
           "
         >
           Projects
         </h2>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
           {projects.map((project) => (
             <div
@@ -112,20 +115,20 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-58 object-cover"
+                className="h-52 w-full object-cover sm:h-56"
               />
 
-              <div className="p-6">
-                <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
+              <div className="p-5 sm:p-6">
+                <h3 className="mb-4 text-xl font-bold sm:text-2xl">{project.title}</h3>
 
-                <p className="text-gray-400 mb-5 leading-7">{project.description}</p>
-              <div className="flex flex-wrap gap-3 mb-6">
+                <p className="mb-5 leading-7 text-gray-400">{project.description}</p>
+              <div className="mb-6 flex flex-wrap gap-3">
 
   {project.tech.map((tech) => (
     <span
       key={tech}
       className="
-        px-4
+        px-3
         py-2
         rounded-full
         bg-slate-800
@@ -140,7 +143,7 @@ export default function Projects() {
 
 </div>
 
-                <div className="flex gap-6">
+                <div className="flex gap-6 text-sm sm:text-base">
                   <a
                     href={project.github}
                     target="_blank"

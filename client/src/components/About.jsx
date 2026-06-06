@@ -4,17 +4,18 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center px-6 py-20 bg-white"
+      className="min-h-screen bg-white px-4 py-16 sm:flex sm:items-center sm:px-6 sm:py-20"
     >
-      <div className="max-w-8xl mx-auto">
+      <div className="mx-auto max-w-7xl">
 
         <div
           className="
             grid
-            md:grid-cols-2
-            gap-16
+            gap-10
             items-center
-            px-8
+            sm:grid-cols-2
+            sm:gap-16
+            sm:px-8
           "
         >
 
@@ -25,23 +26,16 @@ export default function About() {
             <img
   src={profilePic}
   alt="Profile"
-  className="
-w-full
-max-w-md
-h-[500px]
-object-cover
-rounded-3xl
-shadow-2xl
-"
+  className="w-full max-w-md max-h-[420px] object-cover rounded-3xl shadow-2xl sm:max-h-[500px]"
 />
 
           </div>
 
          
 
-          <div>
+          <div className="text-center sm:text-left">
 
-            <p className="text-cyan-600 font-semibold text-3xl">
+            <p className="text-lg font-semibold text-cyan-600 sm:text-2xl lg:text-3xl">
   Hi{" "}
 
   <motion.span
@@ -65,10 +59,12 @@ shadow-2xl
 
             <h2
               className="
-                text-6xl
+                text-4xl
                 font-bold
                 text-slate-900
                 mt-2
+                sm:text-5xl
+                lg:text-6xl
               "
             >
               Backend Developer
@@ -77,9 +73,11 @@ shadow-2xl
             <p
               className="
                 text-slate-500
-                text-2xl
+                text-lg
                 mt-3
                 mb-8
+                sm:text-xl
+                lg:text-2xl
               "
             >
               Computer Science Engineering Student
@@ -91,7 +89,9 @@ shadow-2xl
                 text-slate-700
                 leading-8
                 mb-3
-                text-xl
+                text-base
+                sm:text-lg
+                lg:text-xl
               "
             >
               Passionate about building scalable
@@ -104,7 +104,9 @@ shadow-2xl
                 text-slate-700
                 leading-8
                 mb-8
-                text-xl
+                text-base
+                sm:text-lg
+                lg:text-xl
               "
             >
               I enjoy designing REST APIs,
@@ -115,7 +117,7 @@ shadow-2xl
 
             
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
 
               <span
                 className="

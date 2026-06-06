@@ -50,28 +50,23 @@ const handleSubmit = async (e) => {
   return (
     <section
       id="contact"
-      className="min-h-screen bg-black flex items-center justify-center px-6" 
+      className="min-h-screen bg-black px-4 py-16 text-white sm:px-6 sm:py-20"
     > 
-   <div
-  className="
-    relative
-    w-[95vw]
-    min-h-[85vh]
-    p-10
-  "
->
+   <div className="mx-auto min-h-[85vh] w-full max-w-6xl p-0 sm:p-4 lg:p-8">
    
-          <div className="text-center mb-12">
+          <div className="mb-12 text-center">
 
-            <p className="text-gray-400 text-2xl font-bold mb-2">
+            <p className="mb-2 text-lg font-bold text-gray-400 sm:text-xl lg:text-2xl">
               Get In Touch
             </p>
 
             <h2
               className="
-                text-5xl
+                text-3xl
                 font-bold
                 text-white
+                sm:text-4xl
+                lg:text-5xl
               "
             >
               CONTACT
@@ -83,10 +78,11 @@ const handleSubmit = async (e) => {
           <div
             className="
               grid
-              md:grid-cols-2
-              gap-30
+              gap-10
               items-start
-              px-20
+              sm:grid-cols-2
+              sm:gap-14
+              sm:px-8
             "
           >
 
@@ -102,6 +98,7 @@ const handleSubmit = async (e) => {
                   bg-slate-800
                   p-4
                   rounded-xl
+                  break-words
                   
                 "
               >
@@ -120,6 +117,7 @@ const handleSubmit = async (e) => {
                   bg-slate-800
                   p-4
                   rounded-xl
+                  break-words
                   
                 "
               >
@@ -137,7 +135,8 @@ const handleSubmit = async (e) => {
                   gap-4
                   bg-slate-800
                   p-4
-                  rounded-xl"
+                  rounded-xl
+                  break-words"
               >
                 <FaMapMarkerAlt className="text-white" />
 
@@ -154,7 +153,7 @@ const handleSubmit = async (e) => {
 
             
 
-            <form onSubmit={handleSubmit}className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-5">
 
 <input
   type="text"
@@ -221,9 +220,12 @@ const handleSubmit = async (e) => {
                   hover:bg-gray-400
                   px-8
                   py-3
+                  text-black
                   rounded-xl
                   font-semibold
                   transition
+                  w-full
+                  sm:w-auto
                 "
               >
                 Send Message

@@ -4,16 +4,19 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="min-h-screen py-20 px-6"
+      className="min-h-screen bg-white px-4 py-16 sm:px-6 sm:py-20"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="mx-auto max-w-6xl">
 
         <h2
           className="
-            text-5xl
+            text-3xl
             font-bold
             text-center
-            mb-16
+            mb-12
+            sm:text-4xl
+            lg:mb-16
+            lg:text-5xl
           "
         >
           Experience
@@ -21,7 +24,7 @@ export default function Experience() {
 
         <div>
 
-          <div className="flex gap-6 items-start">
+          <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
 
            
 
@@ -29,22 +32,28 @@ export default function Experience() {
               src={ukshatiLogo}
               alt="Ukshati Technologies"
               className="
-                h-40
-                w-40
+                h-28
+                w-28
                 object-contain
                 rounded-xl
+                sm:h-36
+                sm:w-36
+                lg:h-40
+                lg:w-40
               "
             />
 
            
 
-            <div>
+            <div className="flex-1">
 
               <h3
                 className="
-                  text-4xl
+                  text-2xl
                   font-bold
                   text-black
+                  sm:text-3xl
+                  lg:text-4xl
                 "
               >
                 Software Development Intern
@@ -55,7 +64,9 @@ export default function Experience() {
                   text-cyan-700
                   font-medium
                   mt-2
-                  text-3xl
+                  text-lg
+                  sm:text-2xl
+                  lg:text-3xl
                 "
               >
                 Ukshati Technologies Pvt. Ltd.
@@ -65,7 +76,9 @@ export default function Experience() {
                 className="
                   text-gray-700
                   mt-1
-                  text-xl
+                  text-base
+                  sm:text-lg
+                  lg:text-xl
                 "
               >
                 Jan 2026 – May 2026
@@ -80,7 +93,9 @@ export default function Experience() {
                     space-y-3
                     text-black
                     leading-7
-                    text-xl
+                    text-base
+                    sm:text-lg
+                    lg:text-xl
                   "
                 >
                   <li>
@@ -132,14 +147,15 @@ export default function Experience() {
                   <span
                     key={tech}
                     className="
-                      px-4
+                      px-3
                       py-2
                       rounded-full
                       bg-cyan-500/10
                       text-black
                       border
                       border-gray-400
-                      text-lg
+                      text-sm
+                      sm:text-base
                     "
                   >
                     {tech}

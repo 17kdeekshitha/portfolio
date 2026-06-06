@@ -5,13 +5,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center px-6"
+      className="min-h-screen px-4 pt-32 sm:flex sm:items-center sm:px-6 sm:pt-36 lg:px-8"
     >
-      <div className="max-w-8xl mx-auto w-full grid md:grid-cols-2 gap-10 items-center">
+      <div className="mx-auto grid w-full max-w-7xl items-center gap-10 sm:grid-cols-2">
 
        
-        <div>
-          <p className="text-3xl mb-4">
+        <div className="text-center sm:text-left">
+          <p className="mb-4 text-2xl sm:text-3xl">
             Hey{" "} 
           <motion.span
     animate={{
@@ -32,20 +32,20 @@ export default function Hero() {
   , I'm
           </p>
 
-          <h1 className="text-8xl font-bold mb-6">
+          <h1 className="mb-6 text-5xl font-bold sm:text-6xl lg:text-8xl">
             Deekshitha
           </h1>
 
-          <p className="text-2xl text-gray-700 mb-8">
+          <p className="mb-8 text-lg leading-8 text-gray-700 sm:text-xl lg:text-2xl">
             Passionate about building scalable web
           applications, REST APIs and AI-powered
           solutions.
           </p>
 
-          <div className="flex gap-4 mb-8">
+          <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:justify-start">
             <a
               href="#projects"
-              className="border border-white px-6 py-3 bg-black text-white hover:bg-slate-800 hover:text-white rounded-full"
+              className="rounded-full border border-white bg-black px-6 py-3 text-center text-white hover:bg-slate-800 hover:text-white"
             
             >
               View My Work
@@ -54,13 +54,13 @@ export default function Hero() {
             <a
               href="/Deekshitha_resume.pdf"
               download
-              className="border border-white px-6 py-3 bg-black text-white hover:bg-slate-800 hover:text-white rounded-full"
+              className="rounded-full border border-white bg-black px-6 py-3 text-center text-white hover:bg-slate-800 hover:text-white"
             >
               Download Resume
             </a>
           </div>
 
-          <div className="flex gap-5 text-4xl">
+          <div className="flex justify-center gap-5 text-4xl sm:justify-start">
             <a href="https://www.linkedin.com/in/k-deekshitha-85163b26a">
               <FaLinkedin  color="#0A66C2" />
             </a>
@@ -74,11 +74,11 @@ export default function Hero() {
         </div>
 
        
-        <div className="flex justify-center">
+        <div className="flex justify-center sm:justify-end">
           <img
             src="/hero.jpg"
             alt="Developer"
-            className="w-full max-w-6xl"
+            className="w-full max-w-sm rounded-3xl object-cover sm:max-w-md lg:max-w-xl"
           />
         </div>
 
